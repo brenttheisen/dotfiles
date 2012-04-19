@@ -41,3 +41,6 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr
 
 # Vi Mode
 bindkey -v
+
+# Don't change tmux window titles
+DISABLE_AUTO_TITLE=true
