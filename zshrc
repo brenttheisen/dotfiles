@@ -1,3 +1,6 @@
+# Set the path
+export PATH=/usr/local/mysql/bin:/usr/local/Cellar/vim/7.3/bin:$PATH
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
