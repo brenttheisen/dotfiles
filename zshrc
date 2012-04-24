@@ -47,3 +47,5 @@ bindkey -v
 
 # Don't change tmux window titles
 DISABLE_AUTO_TITLE=true
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
