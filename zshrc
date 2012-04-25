@@ -1,5 +1,8 @@
 # Set the path
-export PATH=/usr/local/mysql/bin:/usr/local/Cellar/vim/7.3/bin:$PATH
+export PATH=/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH
+
+# Use MacVim's command line executable
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -48,4 +51,3 @@ bindkey -v
 # Don't change tmux window titles
 DISABLE_AUTO_TITLE=true
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
