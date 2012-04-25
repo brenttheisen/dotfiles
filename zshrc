@@ -1,5 +1,5 @@
 # Set the path
-export PATH=/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH
+export PATH=/usr/local/mysql/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
 
 # Use MacVim's command line executable
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
