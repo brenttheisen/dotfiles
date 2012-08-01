@@ -1,6 +1,3 @@
-# Set the path
-export PATH=/usr/local/mysql/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
-
 # Use MacVim's command line executable
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
@@ -40,7 +37,7 @@ plugins=(git rails3 rake rvm vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:/Users/brent/.rvm/bin
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
