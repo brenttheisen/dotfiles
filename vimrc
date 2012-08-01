@@ -1,6 +1,9 @@
 syntax enable
 colorscheme bclear
 
+" Load Pathogen
+call pathogen#infect()
+
 " A bunch of settings from http://biodegradablegeek.com/2007/12/using-vim-as-a-complete-ruby-on-rails-ide/
 set cf  " Enable error files & error jumping.
 set history=256  " Number of things to remember in history.
@@ -40,3 +43,14 @@ au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd BufRead * inoremap # X<c-h>#
 
 set clipboard=unnamed
+
+" Color for inactive window status line
+hi StatusLineNC ctermbg=7 ctermfg=234
+
+" Profiles for dbext
+let g:dbext_default_type   = 'MYSQL'
+let g:dbext_default_user   = 'brent'
+let g:dbext_default_passwd = ''
+
+let g:dbext_default_profile_usual = 'type=MYSQL:user=brent:passwd=:dbname=womply_development:extra=-t'
+
