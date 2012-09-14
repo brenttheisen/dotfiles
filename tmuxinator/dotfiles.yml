@@ -1,0 +1,14 @@
+project_name: dotfiles
+project_root: ~/dotfiles
+tabs:
+  - code:
+      layout: ee45,238x67,0,0{119x67,0,0,118x67,120,0[118x33,120,0,118x33,120,34]}
+      panes:
+        - vim
+        - rc
+        - # shell
+  - scratch:
+      layout: ee45,238x67,0,0{119x67,0,0,118x67,120,0[118x33,120,0,118x33,120,34]}
+      panes:
+        - # shell
+        - # shell

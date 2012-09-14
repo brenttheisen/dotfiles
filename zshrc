@@ -1,3 +1,7 @@
+# Needed for Tmuxinator
+export SHELL=zsh
+export EDITOR=vim
+
 # Use MacVim's command line executable
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
