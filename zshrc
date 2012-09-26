@@ -2,9 +2,6 @@
 export SHELL=zsh
 export EDITOR=vim
 
-# Use MacVim's command line executable
-alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
