@@ -46,3 +46,4 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bi
 # Vi Mode
 bindkey -v
 
+ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
