@@ -1,0 +1,2 @@
+export rvm_path="/Users/brent/.rvm"
+rvm_configure_flags=--with-readline-dir=/usr/local
