@@ -54,3 +54,9 @@ let g:dbext_default_passwd = ''
 
 let g:dbext_default_profile_usual = 'type=MYSQL:user=brent:passwd=:dbname=womply_development:extra=-t'
 
+" Vim-Ruby stuff
+if has("autocmd")
+    autocmd FileType ruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+    autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+endif
