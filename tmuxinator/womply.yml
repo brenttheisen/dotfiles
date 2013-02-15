@@ -1,6 +1,5 @@
 project_name: womply
 project_root: ~/womply
-# rvm: ruby-1.9.3-p125@womply-develop
 tabs:
   - code:
       layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
