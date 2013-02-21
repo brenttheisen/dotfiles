@@ -48,3 +48,8 @@ export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 bindkey -v
 
 ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
+
+# Syntax highlighting for less
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
