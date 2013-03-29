@@ -53,3 +53,6 @@ ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.3
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+# Prevent git from using a pager
+# export GIT_PAGER=
+
