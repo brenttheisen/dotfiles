@@ -56,3 +56,5 @@ export LESS=' -R '
 # Prevent git from using a pager
 # export GIT_PAGER=
 
+# Syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
