@@ -58,3 +58,6 @@ export LESS=' -R '
 
 # Syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Git aliases
+alias glu='git fetch origin; git fetch upstream; git merge upstream/$(current_branch); git merge origin/$(current_branch)'
