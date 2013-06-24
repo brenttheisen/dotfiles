@@ -1,0 +1,9 @@
+[user]
+	name = Brent Theisen
+	email = brent@bantamlabs.com
+[color]
+	ui = true
+[push]
+	default = tracking
+[alias]
+  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
