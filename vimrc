@@ -4,6 +4,35 @@ colorscheme bclear
 " Load Pathogen
 call pathogen#infect()
 
+" Laod Vundle
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails.git'
+Bundle 'mattn/gist-vim'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (ie. when working on your own plugin)
+" Bundle 'file:///Users/gmarik/path/to/plugin'
+
+filetype plugin indent on     " required!
+
 " A bunch of settings from http://biodegradablegeek.com/2007/12/using-vim-as-a-complete-ruby-on-rails-ide/
 set cf  " Enable error files & error jumping.
 set history=256  " Number of things to remember in history.
@@ -47,16 +76,12 @@ set clipboard=unnamed
 " Color for inactive window status line
 hi StatusLineNC ctermbg=7 ctermfg=234
 
-" Profiles for dbext
-let g:dbext_default_type   = 'MYSQL'
-let g:dbext_default_user   = 'brent'
-let g:dbext_default_passwd = ''
-
-let g:dbext_default_profile_usual = 'type=MYSQL:user=brent:passwd=:dbname=womply_development:extra=-t'
-
 " Vim-Ruby stuff
 if has("autocmd")
     autocmd FileType ruby set omnifunc=rubycomplete#Complete
     autocmd FileType ruby let g:rubycomplete_buffer_loading=1
     autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 endif
+
+" Gist.vim
+let g:gist_post_private = 1
