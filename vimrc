@@ -4,7 +4,7 @@ colorscheme bclear
 " Load Pathogen
 call pathogen#infect()
 
-" Laod Vundle
+" Load Vundle
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -23,6 +23,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails.git'
 Bundle 'mattn/gist-vim'
+Bundle 'scrooloose/nerdtree'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
