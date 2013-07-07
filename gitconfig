@@ -5,3 +5,5 @@
 	ui = true
 [push]
 	default = tracking
+[github]
+	user = brenttheisen
