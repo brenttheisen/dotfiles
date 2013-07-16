@@ -86,3 +86,5 @@ endif
 
 " Gist.vim
 let g:gist_post_private = 1
+let g:gist_get_multiplefile = 1
+
