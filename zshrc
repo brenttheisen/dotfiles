@@ -62,6 +62,12 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Allow hub to work in git
 eval "$(hub alias -s)"
 
+# Functions
+function last_deploy_production_tag() {
+  tag=$(git tag 2> /dev/null | grep deploy_production_ | sort | tail -1) || return
+  echo ${tag}
+}
+
 # Aliases
 alias gpr='git pull-request'
 compdef _git gpr='git pull-request'
@@ -69,4 +75,6 @@ alias gcmp='git compare'
 compdef _git gcmp='git compare'
 alias gbpush='git push brenttheisen $(current_branch)'
 compdef gbpush=git
+alias gdwdep='git diff $(last_deploy_production_tag)..master'
+alias gcmpwdep='git compare $(last_deploy_production_tag)..master'
 
