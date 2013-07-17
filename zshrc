@@ -59,8 +59,14 @@ export LESS=' -R '
 # Syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Git aliases
-alias glu='git fetch origin; git fetch upstream; git merge upstream/$(current_branch); git merge origin/$(current_branch)'
-
 # Allow hub to work in git
 eval "$(hub alias -s)"
+
+# Aliases
+alias gpr='git pull-request'
+compdef _git gpr='git pull-request'
+alias gcmp='git compare'
+compdef _git gcmp='git compare'
+alias gbpush='git push brenttheisen $(current_branch)'
+compdef gbpush=git
+
