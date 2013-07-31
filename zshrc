@@ -37,9 +37,10 @@ plugins=(git rails3 rake rvm vi-mode per-directory-history brew)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Environment variables
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
+export JAVA_HOME=`/usr/libexec/java_home`
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
