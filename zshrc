@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -70,6 +70,8 @@ function last_deploy_production_tag() {
 }
 
 # Aliases
+
+# Git
 alias gpr='git pull-request'
 compdef _git gpr='git pull-request'
 alias gcmp='git compare'
@@ -79,3 +81,6 @@ compdef gbpush=git
 alias gdwdep='git diff $(last_deploy_production_tag)..master'
 alias gcmpwdep='git compare $(last_deploy_production_tag)..master'
 
+# Pass
+alias pwprod='pass -c Womply/SSH/Prod'
+alias pwpre='pass -c Womply/SSH/Preprod'
