@@ -1,12 +1,12 @@
-project_name: womply
-project_root: ~/womply
-tabs:
+name: womply
+root: ~/womply
+windows:
   - code:
       layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
       panes:
         - vim
         - rc
-        - # shell
+        -
   - monitor:
       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
       panes:
@@ -15,5 +15,5 @@ tabs:
   - scratch:
       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
       panes:
-        - # shell
-        - # shell
+        -
+        -
