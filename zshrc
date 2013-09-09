@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -78,8 +78,10 @@ alias gcmp='git compare'
 compdef _git gcmp='git compare'
 alias gbpush='git push brenttheisen $(current_branch)'
 compdef gbpush=git
-alias gdwdep='git diff $(last_deploy_production_tag)..master'
-alias gcmpwdep='git compare $(last_deploy_production_tag)..master'
+alias gwddep='git diff $(last_deploy_production_tag)..master'
+alias gwcmpdep='git compare $(last_deploy_production_tag)..master'
+alias gwb='git browse OtoAnalytics/Womply'
+alias gwbc='git browse OtoAnalytics/Womply commit/'
 
 # Pass
 alias pwprod='pass -c Womply/SSH/Prod'
