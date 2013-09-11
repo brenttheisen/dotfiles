@@ -38,7 +38,8 @@ plugins=(git rails3 rake rvm vi-mode per-directory-history brew mvn)
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin
+export DSE_HOME=/opt/dse
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
