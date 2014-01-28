@@ -33,15 +33,16 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails3 rake rvm vi-mode per-directory-history brew mvn)
+plugins=(git rails rake rvm vi-mode per-directory-history brew mvn)
 
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables
 export DSE_HOME=/opt/dse
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -83,6 +84,9 @@ alias gwddep='git diff $(last_deploy_production_tag)..master'
 alias gwcmpdep='git compare $(last_deploy_production_tag)..master'
 alias gwb='git browse OtoAnalytics/Womply'
 alias gwbc='git browse OtoAnalytics/Womply commit/'
+
+# Rails
+alias rdbm='rake db:migrate db:test:clone'
 
 # Pass
 alias pwprod='pass -c Womply/SSH/Prod'
