@@ -65,6 +65,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Allow hub to work in git
 eval "$(hub alias -s)"
 
+# Powerline
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
 # Functions
 function last_deploy_production_tag() {
   tag=$(git tag 2> /dev/null | grep deploy_production_ | sort | tail -1) || return
