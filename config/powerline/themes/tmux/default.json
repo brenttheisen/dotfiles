@@ -10,6 +10,9 @@
 	},
 	"segments": {
 		"right": [
+      {
+        "name": "battery"
+      },
 			{
 				"name": "uptime",
 				"priority": 50
@@ -19,17 +22,11 @@
 				"priority": 50
 			},
 			{
-				"name": "date"
-			},
-			{
 				"name": "date",
-				"args": {
-					"format": "%H:%M",
-					"istime": true
-				}
-			},
-			{
-				"name": "hostname"
+        "args": {
+          "format": "%a, %b %-d %H:%M",
+          "istime": true
+        }
 			}
 		]
 	}
