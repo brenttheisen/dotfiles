@@ -1,5 +1,5 @@
 # tmuxinator
-export SHELL=zsh
+# export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
 
 # oh-my-zsh: Path to your oh-my-zsh configuration
