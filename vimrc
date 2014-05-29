@@ -91,6 +91,10 @@ let g:gist_get_multiplefile = 1
 
 " Powerline
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+
 set laststatus=2 " Always show statusline
 set t_Co=256 " Use 256 colours
+
+" Fugitive gutter color overrides
+highlight SignColumn ctermbg=None
 
