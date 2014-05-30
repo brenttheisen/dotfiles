@@ -17,15 +17,4 @@ windows:
       panes:
         - cd ~/womply/rails/womply ; bundle exec guard
         - cd ~/womply/rails/womply ; rs thin
-  - java:
-      layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
-      panes:
-        - cd ~/womply/java
-        - scala
-        - cd ~/womply/java
-  - scratch:
-      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-      panes:
-        -
-        -
 
