@@ -16,22 +16,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-"
-" original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails.git'
 Bundle 'mattn/gist-vim'
 Bundle 'scrooloose/nerdtree'
-" vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'derekwyatt/vim-scala'
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (ie. when working on your own plugin)
-" Bundle 'file:///Users/gmarik/path/to/plugin'
 
 filetype plugin indent on     " required!
 
@@ -44,7 +37,7 @@ set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk  " Uncomment this to set a default theme
- 
+
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
@@ -59,7 +52,7 @@ set nocindent
 set autoindent
 set smarttab
 set expandtab
- 
+
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
