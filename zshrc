@@ -61,6 +61,9 @@ alias pwpre='pass -c Womply/SSH/Preprod'
 alias pwawsproper='pass -c Womply/AWS/Proper'
 alias pwawsbrent='pass -c Womply/AWS/Brent'
 
+# other zsh aliases
+alias ctags="`brew --prefix`/bin/ctags"
+
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 

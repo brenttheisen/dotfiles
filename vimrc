@@ -13,18 +13,17 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails.git'
-Bundle 'mattn/gist-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'derekwyatt/vim-scala'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails.git'
+Plugin 'mattn/gist-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'L9'
+Plugin 'wincent/Command-T'
+Plugin 'derekwyatt/vim-scala'
 
 filetype plugin indent on     " required!
 
@@ -90,4 +89,7 @@ set t_Co=256 " Use 256 colours
 
 " Fugitive gutter color overrides
 highlight SignColumn ctermbg=None
+
+let mapleader = ","
+set path=.,,,**
 
