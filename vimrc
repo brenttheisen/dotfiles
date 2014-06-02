@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 Plugin 'wincent/Command-T'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'gitignore'
 
 filetype plugin indent on     " required!
 
