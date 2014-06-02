@@ -63,6 +63,7 @@ alias pwawsbrent='pass -c Womply/AWS/Brent'
 
 # other zsh aliases
 alias ctags="`brew --prefix`/bin/ctags"
+alias vim='stty start undef stop undef ; vim'
 
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
