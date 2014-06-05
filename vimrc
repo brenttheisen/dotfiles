@@ -25,6 +25,7 @@ Plugin 'L9'
 Plugin 'wincent/Command-T'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'gitignore'
+Plugin 'elubow/cql-vim'
 
 filetype plugin indent on     " required!
 
@@ -93,4 +94,7 @@ highlight SignColumn ctermbg=None
 
 let mapleader = ","
 set path=.,,,**
+
+" For CQL plugin
+autocmd BufRead *.cql set syntax=cql
 
