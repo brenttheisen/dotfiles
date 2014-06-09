@@ -26,6 +26,7 @@ Plugin 'wincent/Command-T'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'gitignore'
 Plugin 'elubow/cql-vim'
+Plugin 'plasticboy/vim-markdown'
 
 filetype plugin indent on     " required!
 
@@ -97,4 +98,10 @@ set path=.,,,**
 
 " For CQL plugin
 autocmd BufRead *.cql set syntax=cql
+
+" Fix for buffer delete syntax highlight loss in next window
+set hidden
+
+" Don't do folding for markdown plugin
+let g:vim_markdown_folding_disabled=1
 
