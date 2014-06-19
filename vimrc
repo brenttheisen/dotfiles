@@ -27,6 +27,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'gitignore'
 Plugin 'elubow/cql-vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'yegappan/grep'
 
 filetype plugin indent on     " required!
 
