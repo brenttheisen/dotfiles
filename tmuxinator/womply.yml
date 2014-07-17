@@ -12,9 +12,9 @@ windows:
         - cd ~/womply/rails/womply ; vim
         - cd ~/womply/rails/womply ; rc
         - cd ~/womply/rails/womply
-  - rails_monitor:
-      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-      panes:
-        - cd ~/womply/rails/womply ; bundle exec guard
-        - cd ~/womply/rails/womply ; rs thin
+#   - rails_monitor:
+#       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+#       panes:
+#         - cd ~/womply/rails/womply ; bundle exec guard
+#         - cd ~/womply/rails/womply ; rs thin
 
