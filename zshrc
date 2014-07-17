@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git rails rake rvm vi-mode per-directory-history brew mvn ssh-agent)
+plugins=(git rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,6 +41,7 @@ function last_deploy_production_tag() {
   echo ${tag}
 }
 
+# git zsh aliases
 alias gpr='git pull-request'
 compdef _git gpr='git pull-request'
 alias gcmp='git compare'
@@ -64,6 +65,7 @@ alias pwawsbrent='pass -c Womply/AWS/Brent'
 # other zsh aliases
 alias ctags="`brew --prefix`/bin/ctags"
 alias vim='stty start undef stop undef ; vim'
+alias tc='tmux_copy'
 
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
