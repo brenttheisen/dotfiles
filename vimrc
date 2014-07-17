@@ -28,6 +28,7 @@ Plugin 'gitignore'
 Plugin 'elubow/cql-vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'yegappan/grep'
+Plugin 'mattn/webapi-vim'
 
 filetype plugin indent on     " required!
 
