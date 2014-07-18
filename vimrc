@@ -1,9 +1,3 @@
-syntax enable
-colorscheme bclear
-
-" Load Pathogen
-call pathogen#infect()
-
 " Load Vundle
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -15,6 +9,7 @@ call vundle#rc()
 " required! 
 Plugin 'gmarik/vundle'
 
+Plugin 'vim-scripts/Colour-Sampler-Pack'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
@@ -29,6 +24,9 @@ Plugin 'elubow/cql-vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'yegappan/grep'
 Plugin 'mattn/webapi-vim'
+
+syntax enable
+colorscheme bclear
 
 filetype plugin indent on     " required!
 
