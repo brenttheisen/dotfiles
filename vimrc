@@ -24,6 +24,7 @@ Plugin 'elubow/cql-vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'yegappan/grep'
 Plugin 'mattn/webapi-vim'
+Plugin 'rking/ag.vim'
 
 syntax enable
 colorscheme bclear
