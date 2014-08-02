@@ -26,6 +26,7 @@ Plugin 'yegappan/grep'
 Plugin 'mattn/webapi-vim'
 Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'ekalinin/Dockerfile.vim'
 
 syntax enable
 colorscheme bclear

@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant)
+plugins=(git rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -22,6 +22,7 @@ export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
+export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
