@@ -22,7 +22,7 @@ export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
-export DOCKER_HOST=tcp://192.168.59.103:2375
+export DOCKER_HOST=tcp://192.168.59.104:2375
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -62,6 +62,11 @@ alias pwprod='pass -c Womply/SSH/Prod'
 alias pwpre='pass -c Womply/SSH/Preprod'
 alias pwawsproper='pass -c Womply/AWS/Proper'
 alias pwawsbrent='pass -c Womply/AWS/Brent'
+
+# docker aliases
+alias drcnr='docker rm $(docker ps -a -q)'
+alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+alias drun='docker run -i -t $*'
 
 # other zsh aliases
 alias ctags="`brew --prefix`/bin/ctags"
