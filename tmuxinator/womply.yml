@@ -1,20 +1,36 @@
 project_name: womply
 project_root: ~/womply
 windows:
-  - root:
-      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-      panes:
-        -
-        -
   - rails_code:
       layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
       panes:
-        - cd ~/womply/rails/womply ; vim
-        - cd ~/womply/rails/womply ; rc
-        - cd ~/womply/rails/womply
-#   - rails_monitor:
-#       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-#       panes:
-#         - cd ~/womply/rails/womply ; bundle exec guard
-#         - cd ~/womply/rails/womply ; rs thin
+        - cd ~/womply && vim
+        - cd ~/womply && rc
+        - cd ~/womply
+  - rails_monitor:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/womply && bundle exec guard
+        - cd ~/womply && rs thin
+  - womply-kitchen:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/womply-kitchen && vim
+        - cd ~/womply-kitchen
+  - womply-chef:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/womply-chef && vim
+        - cd ~/womply-chef
+  - womply-services:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/womply-services && vim
+        - cd ~/womply-services
+  - womply-spark:
+      layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
+      panes:
+        - cd ~/womply-spark && vim
+        - cd ~/womply-spark && sbt
+        - cd ~/womply-spark
 
