@@ -1,4 +1,6 @@
-# tmuxinator
+# Need to include this for man pages for some reason
+source /etc/profile
+
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
 
