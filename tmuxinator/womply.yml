@@ -12,6 +12,17 @@ windows:
       panes:
         - cd ~/womply && bundle exec guard
         - cd ~/womply && rs thin
+  - womply-java:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/womply-java
+        - cd ~/womply-java
+  - womply-spark:
+      layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
+      panes:
+        - cd ~/womply-spark && vim
+        - cd ~/womply-spark && sbt
+        - cd ~/womply-spark
   - womply-kitchen:
       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
       panes:
@@ -22,15 +33,4 @@ windows:
       panes:
         - cd ~/womply-chef && vim
         - cd ~/womply-chef
-  - womply-services:
-      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-      panes:
-        - cd ~/womply-services && vim
-        - cd ~/womply-services
-  - womply-spark:
-      layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
-      panes:
-        - cd ~/womply-spark && vim
-        - cd ~/womply-spark && sbt
-        - cd ~/womply-spark
 
