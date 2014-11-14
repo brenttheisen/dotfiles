@@ -1,6 +1,3 @@
-# Need to include this for man pages for some reason
-source /etc/profile
-
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
 
@@ -77,4 +74,9 @@ alias tc='tmux_copy'
 
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Fix for man pages
+if [ -x /usr/libexec/path_helper ]; then
+  eval `/usr/libexec/path_helper -s`
+fi
 
