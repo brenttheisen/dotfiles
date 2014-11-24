@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment variables
 export DSE_HOME=/opt/dse
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
@@ -79,4 +78,6 @@ alias tc='tmux_copy'
 if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
+
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 
