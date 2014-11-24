@@ -7,3 +7,6 @@
 	default = tracking
 [github]
 	user = brenttheisen
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
