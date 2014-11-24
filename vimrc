@@ -27,6 +27,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'rking/ag.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'scrooloose/syntastic'
 
 syntax enable
 colorscheme bclear
