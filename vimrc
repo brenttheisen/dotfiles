@@ -72,6 +72,8 @@ set laststatus=2  " Always show status line.
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd BufRead * inoremap # X<c-h>#
 
+au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
+
 set clipboard=unnamed
 
 " Color for inactive window status line
