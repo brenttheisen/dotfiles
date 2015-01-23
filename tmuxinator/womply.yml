@@ -28,9 +28,4 @@ windows:
       panes:
         - cd ~/womply-kitchen && vim
         - cd ~/womply-kitchen
-  - womply-chef:
-      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
-      panes:
-        - cd ~/womply-chef && vim
-        - cd ~/womply-chef
 
