@@ -22,9 +22,6 @@ export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 export DOCKER_HOST=tcp://192.168.59.104:2375
 
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 # zsh: Vi Mode
 bindkey -v
 
@@ -80,4 +77,7 @@ if [ -x /usr/libexec/path_helper ]; then
 fi
 
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
