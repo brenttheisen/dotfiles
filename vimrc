@@ -72,7 +72,11 @@ set laststatus=2  " Always show status line.
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 autocmd BufRead * inoremap # X<c-h>#
 
-au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=80
+au BufRead,BufNewFile *.md,*.markdown setlocal spell
+au BufRead,BufNewFile *.md,*.markdown setlocal wrap
+au BufRead,BufNewFile *.md,*.markdown setlocal linebreak
+au BufRead,BufNewFile *.md,*.markdown setlocal nolist  " list disables linebreak
+
 
 set clipboard=unnamed
 
