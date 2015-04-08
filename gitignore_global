@@ -1,0 +1,10 @@
+# Global gitignore
+# To get git to use it either:
+#
+# 1. Make sure you have `excludesfile` set to its path in gitconfig.
+# 2. Run `git config --global core.excludesfile ~/dotfiles/.gitignore_global`
+
+# Vim swap files
+.*.sw?
+.sw?
+
