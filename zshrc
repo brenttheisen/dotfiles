@@ -20,7 +20,7 @@ export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
-export DOCKER_HOST=tcp://192.168.59.104:2375
+export DOCKER_HOST=tcp://127.0.0.1:2375
 
 # zsh: Vi Mode
 bindkey -v
