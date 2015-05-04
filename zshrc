@@ -81,3 +81,5 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
+# boot2docker init
+$(boot2docker shellinit 2> /dev/null)
