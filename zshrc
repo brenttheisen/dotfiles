@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws)
+plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,8 +57,10 @@ alias pwprod='pass -c Womply/SSH/Prod'
 alias pwpre='pass -c Womply/SSH/Preprod'
 alias pwawsproper='pass -c Womply/AWS/Proper'
 alias pwawsbrent='pass -c Womply/AWS/Brent'
+alias pwawsdev='pass -c Womply/AWS/WomplyDev'
 
 # docker aliases
+alias docker="docker --tlsverify=false"
 alias drcnr='docker rm $(docker ps -a -q)'
 alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias drun='docker run -i -t $*'
@@ -67,6 +69,7 @@ alias drun='docker run -i -t $*'
 alias ctags="`brew --prefix`/bin/ctags"
 alias vim='stty start undef stop undef ; vim'
 alias tc='tmux_copy'
+alias ts='date +"%Y%m%d%H%M%S"'
 
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
