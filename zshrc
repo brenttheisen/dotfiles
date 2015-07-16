@@ -48,6 +48,14 @@ alias gwddep='git diff $(last_deploy_production_tag)..master'
 alias gwcmpdep='git compare $(last_deploy_production_tag)..master'
 alias gwb='git browse OtoAnalytics/Womply'
 alias gwbc='git browse OtoAnalytics/Womply commit/'
+alias gbc='git rev-parse --abbrev-ref HEAD'
+
+# github zsh aliases
+alias ghorg="git remote -v | grep -E '^origin.*\(push\)$' | sed -n 's/^.*git\@github\.com\:\(.*\)\/.*$/\1/p'"
+alias ghrepo="git remote -v | grep -E '^origin.*\(push\)$' | sed -n 's/^.*\/\(.*\)\.git.*$/\1/p'"
+
+# circleci zsh aliases
+alias ci='open "https://circleci.com/gh/`ghorg`/`ghrepo`/tree/`gbc`"'
 
 # rails zsh aliases
 alias rdbm='rake db:migrate db:test:clone'
