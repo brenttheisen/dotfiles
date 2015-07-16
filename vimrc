@@ -29,6 +29,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'derekwyatt/vim-sbt'
 
 syntax enable
 colorscheme bclear
