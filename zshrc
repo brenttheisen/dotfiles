@@ -93,4 +93,16 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 # boot2docker init
-$(boot2docker shellinit 2> /dev/null)
+# eval $(boot2docker ip)
+
+DOCKER_MACHINE_NAME=dev
+boot2docker() {
+  if [ "$1" = "ip" ]; then
+    docker-machine ip $DOCKER_MACHINE_NAME
+  else
+    command boot2docker "$@"
+  fi
+}
+
+docker-machine start dev 2>&1 > /dev/null
+eval $(docker-machine env dev)
