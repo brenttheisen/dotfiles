@@ -30,6 +30,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'derekwyatt/vim-sbt'
+Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
 
 syntax enable
 colorscheme bclear
@@ -117,3 +119,5 @@ set hidden
 " Don't do folding for markdown plugin
 let g:vim_markdown_folding_disabled=1
 
+" Enable JSX highlighting inside JS files
+let g:jsx_ext_required = 0
