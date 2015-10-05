@@ -15,9 +15,10 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables
 export DSE_HOME=/opt/dse
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 export DOCKER_HOST=tcp://127.0.0.1:2375
@@ -92,10 +93,11 @@ export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-# boot2docker init
-# eval $(boot2docker ip)
+# boot2docker
+# $(boot2docker shellinit 2> /dev/null)
 
-DOCKER_MACHINE_NAME=dev
+# or... docker-machine
+export DOCKER_MACHINE_NAME=default
 boot2docker() {
   if [ "$1" = "ip" ]; then
     docker-machine ip $DOCKER_MACHINE_NAME
@@ -104,5 +106,5 @@ boot2docker() {
   fi
 }
 
-docker-machine start dev 2>&1 > /dev/null
-eval $(docker-machine env dev)
+# docker-machine start $DOCKER_MACHINE_NAME 2>&1 > /dev/null
+eval $(docker-machine env $DOCKER_MACHINE_NAME)
