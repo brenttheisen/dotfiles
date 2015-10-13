@@ -107,4 +107,4 @@ boot2docker() {
 }
 
 # docker-machine start $DOCKER_MACHINE_NAME 2>&1 > /dev/null
-eval $(docker-machine env $DOCKER_MACHINE_NAME)
+eval $(docker-machine env $DOCKER_MACHINE_NAME 2>&1 > /dev/null)
