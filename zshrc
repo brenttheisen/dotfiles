@@ -22,6 +22,7 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 export DOCKER_HOST=tcp://127.0.0.1:2375
+export VAULT_ADDR=https://hashivault-1.internal.womply.com:8200
 
 # zsh: Vi Mode
 bindkey -v
