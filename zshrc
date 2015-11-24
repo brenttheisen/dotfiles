@@ -75,6 +75,7 @@ alias docker="docker --tlsverify=false"
 alias drcnr='docker rm $(docker ps -a -q)'
 alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias drun='docker run -i -t $*'
+alias dmenv='eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)'
 
 # other zsh aliases
 alias ctags="`brew --prefix`/bin/ctags"
@@ -98,20 +99,4 @@ source $(brew --prefix nvm)/nvm.sh
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-# boot2docker
-# $(boot2docker shellinit 2> /dev/null)
-
-# or... docker-machine
-export DOCKER_MACHINE_NAME=default
-boot2docker() {
-  if [ "$1" = "ip" ]; then
-    docker-machine ip $DOCKER_MACHINE_NAME
-  else
-    command boot2docker "$@"
-  fi
-}
-
-# docker-machine start $DOCKER_MACHINE_NAME 2>&1 > /dev/null
-eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)
 
