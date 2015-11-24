@@ -92,6 +92,10 @@ fi
 
 export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 
+# NodeJS Version Manager
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
@@ -110,3 +114,4 @@ boot2docker() {
 
 # docker-machine start $DOCKER_MACHINE_NAME 2>&1 > /dev/null
 eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)
+
