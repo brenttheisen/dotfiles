@@ -1,6 +1,9 @@
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
 
+# Docker machine we'll use
+export DOCKER_MACHINE_NAME=default
+
 # oh-my-zsh: Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 
@@ -8,7 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws)
+plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
