@@ -1,0 +1,18 @@
+project_name: womply-messenger
+project_root: ~/
+windows:
+  - messenger-android:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/messenger-android && vim
+        - cd ~/messenger-android
+  - messenger-ios:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/messenger-ios && vim
+        - cd ~/messenger-ios
+  - messenger-service:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/messenger-service && vim
+        - cd ~/messenger-service
