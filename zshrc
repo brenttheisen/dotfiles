@@ -78,6 +78,7 @@ alias docker="docker --tlsverify=false"
 alias drcnr='docker rm $(docker ps -a -q)'
 alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias drun='docker run -i -t $*'
+alias dm='docker-machine'
 alias dmenv='eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)'
 
 # other zsh aliases
