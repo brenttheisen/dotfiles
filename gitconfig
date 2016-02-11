@@ -12,3 +12,5 @@
 	smudge = git-media-smudge %f
 [core]
 	excludesfile = /Users/brent/dotfiles/gitignore_global
+[merge]
+	ff = only
