@@ -20,7 +20,7 @@ export DSE_HOME=/opt/dse
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
@@ -95,7 +95,7 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
+export PATH=$HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 
 # NodeJS Version Manager
 export NVM_DIR=~/.nvm
