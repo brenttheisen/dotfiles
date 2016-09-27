@@ -80,6 +80,7 @@ alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias drun='docker run -i -t $*'
 alias dm='docker-machine'
 alias dmenv='eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)'
+alias dc='docker-compose'
 
 # other zsh aliases
 alias ctags="`brew --prefix`/bin/ctags"
@@ -104,3 +105,10 @@ source $(brew --prefix nvm)/nvm.sh
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
+
+# added by travis gem
+[ -f /Users/brent/.travis/travis.sh ] && source /Users/brent/.travis/travis.sh
+
+if [[ -a ~/.zshrc.secure ]]; then
+  source ~/.zshrc.secure
+fi
