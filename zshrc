@@ -82,11 +82,14 @@ alias dm='docker-machine'
 alias dmenv='eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)'
 alias dc='docker-compose'
 
-# other zsh aliases
+# other zsh aliases and functions
 alias ctags="`brew --prefix`/bin/ctags"
 alias vim='stty start undef stop undef ; vim'
 alias tc='tmux_copy'
 alias ts='date +"%Y%m%d%H%M%S"'
+function jira() {
+  open https://womply.atlassian.net/browse/"$1"
+}
 
 # powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -112,3 +115,7 @@ source $(brew --prefix nvm)/nvm.sh
 if [[ -a ~/.zshrc.secure ]]; then
   source ~/.zshrc.secure
 fi
+
+launchctl setenv AWS_ACCESS_KEY_ID "$AWS_ACCESS_KEY_ID"
+launchctl setenv AWS_SECRET_ACCESS_KEY_ID "$AWS_SECRET_ACCESS_KEY_ID"
+
