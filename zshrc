@@ -116,6 +116,6 @@ if [[ -a ~/.zshrc.secure ]]; then
   source ~/.zshrc.secure
 fi
 
-launchctl setenv AWS_ACCESS_KEY_ID "$AWS_ACCESS_KEY_ID"
-launchctl setenv AWS_SECRET_ACCESS_KEY_ID "$AWS_SECRET_ACCESS_KEY_ID"
+export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
+export AWS_SECRET_ACCESS_KEY_ID="$AWS_SECRET_ACCESS_KEY_ID"
 
