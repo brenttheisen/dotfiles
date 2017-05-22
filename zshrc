@@ -85,7 +85,6 @@ alias dc='docker-compose'
 # other zsh aliases and functions
 alias ctags="`brew --prefix`/bin/ctags"
 alias vim='stty start undef stop undef ; vim'
-alias tc='tmux_copy'
 alias ts='date +"%Y%m%d%H%M%S"'
 function jira() {
   open https://womply.atlassian.net/browse/"$1"
