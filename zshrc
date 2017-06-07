@@ -101,8 +101,8 @@ fi
 export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 
 # NodeJS Version Manager
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
