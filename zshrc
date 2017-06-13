@@ -31,9 +31,6 @@ export VAULT_SKIP_VERIFY=1
 # zsh: Vi Mode
 bindkey -v
 
-# zsh: Syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # hub: Allow hub to work in git
 eval "$(hub alias -s)"
 
@@ -118,3 +115,5 @@ fi
 export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
 export AWS_SECRET_ACCESS_KEY_ID="$AWS_SECRET_ACCESS_KEY_ID"
 
+# zsh: Syntax highlighting (this must be at the end)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
