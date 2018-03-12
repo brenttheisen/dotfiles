@@ -87,16 +87,14 @@ alias ts='date +"%Y%m%d%H%M%S"'
 function jira() {
   open https://womply.atlassian.net/browse/"$1"
 }
-
-# powerline
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+alias j='jira'
 
 # Fix for man pages
 if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
+export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
 
 # NodeJS Version Manager
 # export NVM_DIR=~/.nvm
@@ -113,8 +111,8 @@ if [[ -a ~/.zshrc.secure ]]; then
   source ~/.zshrc.secure
 fi
 
-export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
-export AWS_SECRET_ACCESS_KEY_ID="$AWS_SECRET_ACCESS_KEY_ID"
-
 # zsh: Syntax highlighting (this must be at the end)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# powerline
+. /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
