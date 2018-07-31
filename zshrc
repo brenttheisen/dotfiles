@@ -11,7 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws history-substring-search)
+plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant virtualbox docker scala sbt aws history-substring-search nvm)
 
 source $ZSH/oh-my-zsh.sh
 
