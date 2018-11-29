@@ -1,9 +1,6 @@
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
 
-# Docker machine we'll use
-export DOCKER_MACHINE_NAME=default
-
 # oh-my-zsh: Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 
@@ -24,7 +21,6 @@ export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
-export DOCKER_HOST=tcp://127.0.0.1:2375
 export VAULT_ADDR=https://hashivault-1.internal.womply.com:8200
 export VAULT_SKIP_VERIFY=1
 
@@ -71,12 +67,10 @@ alias pwawsbrent='pass -c Womply/AWS/Brent'
 alias pwawsdev='pass -c Womply/AWS/WomplyDev'
 
 # docker aliases
-alias docker="docker --tlsverify=false"
 alias drcnr='docker rm $(docker ps -a -q)'
 alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias drun='docker run -i -t $*'
 alias dm='docker-machine'
-alias dmenv='eval $(docker-machine env $DOCKER_MACHINE_NAME 2> /dev/null)'
 alias dc='docker-compose'
 
 # other zsh aliases and functions
