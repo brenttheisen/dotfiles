@@ -21,6 +21,7 @@ export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
+export DOCKER_HOST=unix:///var/run/docker.sock
 export VAULT_ADDR=https://hashivault-1.internal.womply.com:8200
 export VAULT_SKIP_VERIFY=1
 
