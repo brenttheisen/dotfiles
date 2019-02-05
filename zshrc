@@ -83,8 +83,10 @@ function jira() {
   open https://womply.atlassian.net/browse/"$1"
 }
 alias j='jira'
-
 alias jb='jira $(current_branch)'
+function mvnim() {
+  mvn clean install -pl "$1" -am
+}
 
 # Fix for man pages
 if [ -x /usr/libexec/path_helper ]; then
