@@ -93,7 +93,7 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-export PATH=$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin::$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:~/miniconda3/bin:$PATH
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
@@ -111,3 +111,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # powerline
 . /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/brent/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/brent/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/google-cloud-sdk/completion.zsh.inc'; fi
