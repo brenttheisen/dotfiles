@@ -32,6 +32,7 @@ Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
+Plugin 'klen/python-mode'
 
 syntax enable
 colorscheme bclear
