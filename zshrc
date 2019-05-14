@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_TITLE="true"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant docker scala sbt aws history-substring-search nvm)
+plugins=(git git-flow rails rake rvm vi-mode per-directory-history brew mvn ssh-agent vagrant docker scala sbt aws history-substring-search nvm python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,7 @@ alias ghrepo="git remote -v | grep -E '^origin.*\(push\)$' | sed -n 's/^.*\/\(.*
 
 # circleci zsh aliases
 alias ci='open "https://circleci.com/gh/`ghorg`/`ghrepo`/tree/`gbc`"'
+alias calls='open "https://coveralls.io/github/`ghorg`/`ghrepo`?branch=`gbc`"'
 
 # rails zsh aliases
 alias rdbm='rake db:migrate db:test:clone'
