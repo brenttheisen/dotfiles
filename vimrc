@@ -33,6 +33,7 @@ Plugin 'derekwyatt/vim-sbt'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
 Plugin 'klen/python-mode'
+Plugin 'xavierchow/vim-swagger-preview'
 
 syntax enable
 colorscheme bclear
@@ -122,3 +123,6 @@ let g:vim_markdown_folding_disabled=1
 
 " Enable JSX highlighting inside JS files
 let g:jsx_ext_required = 0
+
+" Ignore directories for ctrl-p
+let g:ctrlp_custom_ignore = 'vendor\|node_modules\|DS_Store\|git'
