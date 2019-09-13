@@ -12,7 +12,7 @@ app_name = defined?(Rails) ? "#{Rails.application.class.to_s.split("::").first.d
 Pry.prompt = [
   proc { |obj, nest_level, pry|
     object_nest_level = " #{obj}[#{nest_level}]" if nest_level > 0
-    "#{app_name}#{object_nest_level}: #{'%03d' % pry.input_array.size}> "
+    "#{app_name}#{object_nest_level}: #{'%03d' % pry.input_ring.size}> "
   },
   proc { |obj, nest_level, _|
     object_nest_level = " #{obj}[#{nest_level}]" if nest_level > 0
