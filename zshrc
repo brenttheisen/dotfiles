@@ -96,10 +96,6 @@ fi
 
 export PATH=/usr/local/opt/python/libexec/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin::$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:~/miniconda3/bin:$PATH
 
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-
 # added by travis gem
 [ -f /Users/brent/.travis/travis.sh ] && source /Users/brent/.travis/travis.sh
 
@@ -118,3 +114,7 @@ if [ -f '/Users/brent/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/brent/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/google-cloud-sdk/completion.zsh.inc'; fi
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
