@@ -75,6 +75,12 @@ alias drun='docker run -i -t $*'
 alias dm='docker-machine'
 alias dc='docker-compose'
 
+# aws-vault aliases
+alias avewa='aws-vault exec womply aws -- '
+alias avlw='aws-vault login womply'
+alias aveda='aws-vault exec devops-test aws -- '
+alias avld='aws-vault login devops-test'
+
 # other zsh aliases and functions
 alias ctags="`brew --prefix`/bin/ctags"
 alias vim='stty start undef stop undef ; vim'
