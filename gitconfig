@@ -14,3 +14,5 @@
 	excludesfile = /Users/brent/dotfiles/gitignore_global
 [merge]
 	ff = only
+[pull]
+	ff = only
