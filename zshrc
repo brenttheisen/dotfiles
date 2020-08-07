@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables
 export DSE_HOME=/opt/dse
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME="/usr/local/opt/openjdk"
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
@@ -100,7 +100,7 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-export PATH=/usr/local/opt/python/libexec/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin::$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:~/miniconda3/bin:$PATH
+export PATH=/usr/local/opt/openjdk/bin:/usr/local/opt/python/libexec/bin:$HOME/bin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin::$(/usr/local/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$DSE_HOME/bin:/opt/opscenter/bin:~/miniconda3/bin:$PATH
 
 # added by travis gem
 [ -f /Users/brent/.travis/travis.sh ] && source /Users/brent/.travis/travis.sh
