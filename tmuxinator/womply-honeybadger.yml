@@ -1,9 +1,0 @@
-project_name: womply-honeybadger
-project_root: ~/
-windows:
-  - monolith:
-      layout: 2f4c,238x67,0,0{119x67,0,0,0,118x67,120,0[118x33,120,0,20,118x33,120,34,21]}
-      panes:
-        - cd ~/womply && vim
-        - cd ~/womply && rc
-        - cd ~/womply

@@ -1,0 +1,13 @@
+project_name: dime
+project_root: ~/dime
+windows:
+  - nodejs:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/dime/mybetalerts-nodejs && vim
+        - cd ~/dime/mybetalerts-nodejs
+  - react-native:
+      layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
+      panes:
+        - cd ~/dime/mybetalerts-react-native && vim
+        - cd ~/dime/mybetalerts-react-native

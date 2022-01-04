@@ -99,7 +99,7 @@ let g:gist_post_private = 1
 let g:gist_get_multiplefile = 1
 
 " Powerline
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=/Users/brent/Library/Python/3.8/lib/python/site-packages/powerline/bindings/vim
 
 set laststatus=2 " Always show statusline
 set t_Co=256 " Use 256 colours
