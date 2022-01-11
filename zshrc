@@ -1,5 +1,6 @@
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=vim
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # oh-my-zsh: Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
@@ -9,7 +10,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Environment variables
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME="/usr/local/opt/openjdk"
+export JAVA_HOME=`/usr/libexec/java_home -v 17`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
@@ -89,6 +90,7 @@ fi
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # powerline
+export PATH=$PATH:~/Library/Python/3.8/bin
 source ~/Library/Python/3.8/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -98,5 +100,8 @@ if [ -f '/Users/brent/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/goo
 if [ -f '/Users/brent/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Set final PATH
-export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:~/Library/Python/3.8/bin:$PATH
+export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:~/Library/Python/3.8/bin
+
+# rbenv
+eval "$(rbenv init - zsh)"
 
