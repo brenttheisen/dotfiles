@@ -10,7 +10,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Environment variables
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home -v 17`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
@@ -84,6 +84,11 @@ fi
 
 if [[ -a ~/.zshrc.secure ]]; then
   source ~/.zshrc.secure
+
+# Install nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
 # zsh: Syntax highlighting (this must be at the end)
