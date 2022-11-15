@@ -64,8 +64,8 @@ alias drun='docker run -i -t $*'
 alias dc='docker-compose'
 
 # aws-vault aliases
-alias aveda='aws-vault exec devops-test aws -- '
-alias avld='aws-vault login devops-test'
+alias aveda='aws-vault exec devs aws -- '
+alias avld='aws-vault login devs'
 
 # other zsh aliases and functions
 alias ctags="`brew --prefix`/bin/ctags"
@@ -75,6 +75,10 @@ alias ts='date +"%Y%m%d%H%M%S"'
 function mvnim() {
   mvn clean install -pl "$1" -am
 }
+
+# Jira stuff
+alias j='f() { open https://${JIRA_ORG_HOSTNAME}.atlassian.net/browse/$1 };f'
+alias jb='j $(current_branch)'
 
 # Fix for man pages
 if [ -x /usr/libexec/path_helper ]; then
@@ -113,4 +117,5 @@ if [ -f '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent
 if [ -f '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc'; fi
 
 # AWS Vault
-export AWS_MIN_TTL=24h
+export AWS_SESSION_TOKEN_TTL=24h
+export AWS_FEDERATION_TOKEN_TTL=24h
