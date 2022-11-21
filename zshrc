@@ -19,7 +19,7 @@ export DOCKER_HOST=unix:///var/run/docker.sock
 export VAULT_SKIP_VERIFY=1
 
 # oh-my-zsh: List of plugins to load
-plugins=(git git-flow vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass)
+plugins=(git git-flow vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,7 +64,8 @@ alias drun='docker run -i -t $*'
 alias dc='docker-compose'
 
 # aws-vault aliases
-alias aveda='aws-vault exec devs aws -- '
+alias aved='aws-vault exec devs -- '
+alias aveda='aved aws '
 alias avld='aws-vault login devs'
 
 # other zsh aliases and functions
