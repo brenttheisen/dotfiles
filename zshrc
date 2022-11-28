@@ -81,6 +81,9 @@ function mvnim() {
 alias j='f() { open https://${JIRA_ORG_HOSTNAME}.atlassian.net/browse/$1 };f'
 alias jb='j $(current_branch)'
 
+# Misc aliases
+alias p='ping 8.8.8.8'
+
 # Fix for man pages
 if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
