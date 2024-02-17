@@ -64,9 +64,10 @@ alias drun='docker run -i -t $*'
 alias dc='docker-compose'
 
 # aws-vault aliases
-alias aved='aws-vault exec devs -- '
+AWS_VAULT_PROFILE="319448201427:brent"
+alias aved='aws-vault exec $AWS_VAULT_PROFILE -- '
 alias aveda='aved aws '
-alias avld='aws-vault login devs'
+alias avld='aws-vault login $AWS_VAULT_PROFILE'
 
 # other zsh aliases and functions
 alias ctags="`brew --prefix`/bin/ctags"
@@ -81,8 +82,13 @@ function mvnim() {
 alias j='f() { open https://${JIRA_ORG_HOSTNAME}.atlassian.net/browse/$1 };f'
 alias jb='j $(current_branch)'
 
+# Pass aliases
+alias pw='pass '
+alias pwc='pass -c '
+
 # Misc aliases
 alias p='ping 8.8.8.8'
+alias grr='grep -Rn'
 
 # Fix for man pages
 if [ -x /usr/libexec/path_helper ]; then
