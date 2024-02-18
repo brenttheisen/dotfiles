@@ -2,10 +2,12 @@
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
+Plug 'edkolev/tmuxline.vim'
+Plug 'overcache/NeoSolarized' 
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'akinsho/bufferline.nvim'
+Plug 'bling/vim-bufferline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'folke/trouble.nvim'
 Plug 'tpope/vim-fugitive'
@@ -18,8 +20,8 @@ call plug#end()
 
 " Configuration
 set termguicolors
+colorscheme NeoSolarized
 syntax enable
-set t_Co=0
 
 " TypeScript and Next.js specific settings
 autocmd FileType typescriptreact setlocal ts=tsx
@@ -40,4 +42,4 @@ let g:coc_global_extensions = [
 " Airline
 " set laststatus=2
 let g:airline_powerline_fonts = 1
-" let g:airline_solarized_bg='dark'
+let g:airline_solarized_bg='dark'
