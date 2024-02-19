@@ -2,7 +2,6 @@
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'edkolev/tmuxline.vim'
 Plug 'overcache/NeoSolarized' 
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'vim-airline/vim-airline'
