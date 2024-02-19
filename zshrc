@@ -1,16 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
-export EDITOR=vim
+export EDITOR=nvim
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # oh-my-zsh: Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # oh-my-zsh: Uncomment following line if you want to disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
 # Environment variables
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+# export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
 export ANDROID_SDK_ROOT=/Users/brent/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
@@ -110,22 +118,25 @@ NODE_VER='default'
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # powerline
-export PATH=$PATH:~/Library/Python/3.8/bin
-source ~/Library/Python/3.8/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+# export PATH=$PATH:~/Library/Python/3.8/bin
+# source ~/Library/Python/3.8/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Set final PATH
 export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:~/Library/Python/3.8/bin
 
 # rbenv
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/completion.zsh.inc'; fi
 
 # AWS Vault
 export AWS_SESSION_TOKEN_TTL=24h
 export AWS_FEDERATION_TOKEN_TTL=24h
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

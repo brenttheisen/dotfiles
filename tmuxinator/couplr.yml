@@ -4,7 +4,7 @@ windows:
   - nextjs:
       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
       panes:
-        - cd ~/couplr/nextjs && vim
+        - cd ~/couplr/nextjs && $EDITOR
         - cd ~/couplr/nextjs
   - local:
       layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}

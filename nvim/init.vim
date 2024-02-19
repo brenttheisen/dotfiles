@@ -20,7 +20,6 @@ call plug#end()
 
 " Configuration
 set termguicolors
-colorscheme NeoSolarized
 syntax enable
 
 " TypeScript and Next.js specific settings
@@ -42,4 +41,30 @@ let g:coc_global_extensions = [
 " Airline
 " set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_solarized_bg='dark'
+set background=dark
+colorscheme NeoSolarized
+
+" Formatting (some of these are for coding in C and C++)
+set ts=2  " Tabs are 2 spaces
+set bs=2  " Backspace over everything in insert mode
+set shiftwidth=2  " Tabs under smart indent
+set nocp incsearch
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set formatoptions=tcqr
+set nocindent
+" Attempt to not reindent comments (#)
+" set cinkeys 0{,0},0),:,!^F,o,0,e
+set autoindent
+set smarttab
+set expandtab
+
+" Visual
+set showmatch  " Show matching brackets.
+set mat=5  " Bracket blinking.
+set list
+" Show $ at end of line and trailing space as ~
+set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+set novisualbell  " No blinking .
+set noerrorbells  " No noise.
+
