@@ -6,7 +6,6 @@ Plug 'overcache/NeoSolarized'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'folke/trouble.nvim'
 Plug 'tpope/vim-fugitive'
@@ -40,6 +39,7 @@ let g:coc_global_extensions = [
 " Airline
 " set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 set background=dark
 colorscheme NeoSolarized
 
