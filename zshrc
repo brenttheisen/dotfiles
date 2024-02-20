@@ -117,16 +117,11 @@ NODE_VER='default'
 # zsh: Syntax highlighting (this must be at the end)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# powerline
-# export PATH=$PATH:~/Library/Python/3.8/bin
-# source ~/Library/Python/3.8/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-
 # Set final PATH
-export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:~/Library/Python/3.8/bin
+export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # rbenv
 # eval "$(rbenv init - zsh)"
-
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brent/tmp/google-cloud-sdk/path.zsh.inc'; fi
