@@ -14,6 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Configuration
@@ -21,8 +22,8 @@ set termguicolors
 syntax enable
 
 " TypeScript and Next.js specific settings
-autocmd FileType typescriptreact setlocal ts=tsx
-autocmd FileType typescript setlocal ts=tsx
+" autocmd FileType typescriptreact setlocal ts=tsx
+" autocmd FileType typescript setlocal ts=tsx
 
 " Coc.nvim settings (for auto-completion, linting, etc.)
 autocmd FileType javascript,c,javascriptreact,cpp setlocal equalprg=coc\#format\#sync\(\)
@@ -73,3 +74,5 @@ set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
