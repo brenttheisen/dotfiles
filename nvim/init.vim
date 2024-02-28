@@ -14,6 +14,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvimtools/none-ls.nvim'
+Plug 'MunifTanjim/prettier.nvim'
 Plug 'github/copilot.vim'
 call plug#end()
 
@@ -85,3 +88,13 @@ nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
 nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
 nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
 nnoremap gR <cmd>TroubleToggle lsp_references<cr>
+
+" Buffers
+map gn :bnext<cr>
+map gp :bprevious<cr>
+map gd :bdelete<cr>
+
+map <leader>\ :bnext<cr>
+map <leader>n :bnext<cr>
+map <leader>p :bprevious<cr>
+map <leader>d :bdelete<cr>
