@@ -11,7 +11,7 @@ windows:
       panes:
         - cd ~/couplr/nextjs && npm run dev
         - cd ~/couplr/nextjs && npx mailing --quiet
-        - cd ~/couplr/nextjs && dc up postgres redis
+        - cd ~/couplr/nextjs && dc up
   - aws:
       layout: d959,238x67,0,0{119x67,0,0,28,118x67,120,0,29}
       panes:
