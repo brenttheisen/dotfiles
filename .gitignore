@@ -2,3 +2,4 @@
 bin/ecsman
 zshrc.secure
 config/hub
+nvim/plugged

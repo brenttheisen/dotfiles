@@ -2,12 +2,16 @@
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'overcache/NeoSolarized' 
+Plug 'overcache/NeoSolarized'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'folke/trouble.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -80,7 +84,6 @@ set noerrorbells  " No noise.
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-" TODO Fix Trouble or remove it
 " Trouble
 nnoremap <leader>xx <cmd>TroubleToggle<cr>
 nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
@@ -98,3 +101,12 @@ map <leader>\ :bnext<cr>
 map <leader>n :bnext<cr>
 map <leader>p :bprevious<cr>
 map <leader>d :bdelete<cr>
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" LUA Init
+lua require('lsp')
