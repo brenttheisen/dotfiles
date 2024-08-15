@@ -7,6 +7,8 @@ fi
 
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=nvim
+alias vi=nvim
+
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # oh-my-zsh: Path to your oh-my-zsh configuration
@@ -25,6 +27,17 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 export LESS=' -R '
 export DOCKER_HOST=unix:///var/run/docker.sock
 export VAULT_SKIP_VERIFY=1
+
+# Find process listening on a port
+psport() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
 
 # oh-my-zsh: List of plugins to load
 plugins=(git git-flow vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass zsh-nvm)
@@ -58,13 +71,6 @@ alias gbc='git rev-parse --abbrev-ref HEAD'
 alias ghorg="git remote -v | grep -E '^origin.*\(push\)$' | sed -n 's/^.*git\@github\.com\:\(.*\)\/.*$/\1/p'"
 alias ghrepo="git remote -v | grep -E '^origin.*\(push\)$' | sed -n 's/^.*\/\(.*\)\.git.*$/\1/p'"
 
-# circleci zsh aliases
-alias ci='open "https://circleci.com/gh/`ghorg`/`ghrepo`/tree/`gbc`"'
-alias calls='open "https://coveralls.io/github/`ghorg`/`ghrepo`?branch=`gbc`"'
-
-# rails zsh aliases
-alias rdbm='rake db:migrate db:test:clone'
-
 # docker aliases
 alias drcnr='docker rm $(docker ps -a -q)'
 alias drint='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
@@ -93,6 +99,9 @@ alias jb='j $(current_branch)'
 # Pass aliases
 alias pw='pass '
 alias pwc='pass -c '
+
+# Github Copilot
+alias ghc='gh copilot'
 
 # Misc aliases
 alias p='ping 8.8.8.8'
