@@ -2,7 +2,7 @@
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'overcache/NeoSolarized'
+Plug 'maxmx03/solarized.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
@@ -22,6 +22,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvimtools/none-ls.nvim'
 Plug 'MunifTanjim/prettier.nvim'
 Plug 'github/copilot.vim'
+Plug 'vimpostor/vim-lumen'
 call plug#end()
 
 " Configuration
@@ -33,6 +34,8 @@ syntax enable
 " autocmd FileType typescript setlocal ts=tsx
 
 " Coc.nvim settings (for auto-completion, linting, etc.)
+inoremap <silent><expr> <c-space> coc#refresh()
+
 autocmd FileType javascript,c,javascriptreact,cpp setlocal equalprg=coc\#format\#sync\(\)
 autocmd FileType typescript,json,javascriptreact,javascript setl formatprg=coc\#format\#sync\(\)
 
@@ -48,8 +51,8 @@ let g:coc_global_extensions = [
 " set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-set background=dark
-colorscheme NeoSolarized
+
+colorscheme solarized
 
 " Copy to OS clipboard
 set clipboard+=unnamedplus
