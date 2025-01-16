@@ -3,3 +3,4 @@ bin/ecsman
 zshrc.secure
 config/hub
 nvim/plugged
+node_modules/

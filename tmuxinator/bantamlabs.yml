@@ -1,0 +1,22 @@
+project_name: bantamlabs
+project_root: ~/bantamlabs
+windows:
+  - scoreboard:
+      layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
+      panes:
+        - cd scoreboard && nvim
+        - cd scoreboard
+        - cd scoreboard
+  - revops:
+      layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
+      panes:
+        - cd revops && nvim
+        - cd revops && npx jest --watch
+        - cd revops
+  - revops-server:
+      layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
+      panes:
+        - cd revops && LOG_LEVEL=debug NODE_OPTIONS='--require reflect-metadata' npx next dev | npx pino-pretty
+        - cd revops && dc up
+        - cd revops && LOG_LEVEL=debug npm run worker
+

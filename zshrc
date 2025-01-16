@@ -8,17 +8,20 @@ fi
 # export SHELL=zsh # Commented out because it breaks ssh ProxyCommand for some reason
 export EDITOR=nvim
 alias vi=nvim
-
-export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+alias vim=nvim
 
 # oh-my-zsh: Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# oh-my-zsh: List of plugins to load
+plugins=(git gitfast vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass zsh-nvm)
+
 # oh-my-zsh: Uncomment following line if you want to disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
 
 # Environment variables
+export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:~/.docker/cli-plugins
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 # export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
@@ -38,9 +41,6 @@ psport() {
         echo "Usage: listening [pattern]"
     fi
 }
-
-# oh-my-zsh: List of plugins to load
-plugins=(git git-flow vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,9 +125,6 @@ NODE_VER='default'
 
 # zsh: Syntax highlighting (this must be at the end)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Set final PATH
-export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # rbenv
 # eval "$(rbenv init - zsh)"

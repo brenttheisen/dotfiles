@@ -23,6 +23,8 @@ Plug 'nvimtools/none-ls.nvim'
 Plug 'MunifTanjim/prettier.nvim'
 Plug 'github/copilot.vim'
 Plug 'vimpostor/vim-lumen'
+Plug 'mattkubej/jest.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 " Configuration
@@ -111,5 +113,3 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" LUA Init
-lua require('lsp')
