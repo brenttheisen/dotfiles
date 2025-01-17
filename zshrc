@@ -15,7 +15,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # oh-my-zsh: List of plugins to load
-plugins=(git gitfast vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass zsh-nvm)
+plugins=(git gitfast vi-mode per-directory-history brew mvn ssh-agent docker aws history-substring-search jsontools pass nvm)
 
 # oh-my-zsh: Uncomment following line if you want to disable autosetting terminal title
 DISABLE_AUTO_TITLE="true"
@@ -115,13 +115,6 @@ fi
 if [[ -a ~/.zshrc.secure ]]; then
   source ~/.zshrc.secure
 fi
-
-# Install nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-NODE_VER='default'
-# nvm use $NODE_VER
 
 # zsh: Syntax highlighting (this must be at the end)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
