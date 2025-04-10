@@ -1,12 +1,13 @@
 project_name: bantamlabs
 project_root: ~/bantamlabs
 windows:
-  - scoreboard:
-      layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
-      panes:
-        - cd scoreboard && nvim
-        - cd scoreboard
-        - cd scoreboard
+  # Commented out the scoreboard cause its its own project
+  # - scoreboard:
+  #     layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
+  #     panes:
+  #       - cd scoreboard && nvim
+  #       - cd scoreboard
+  #       - cd scoreboard
   - revops:
       layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
       panes:
