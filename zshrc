@@ -5,22 +5,19 @@ fi
 
 # 2. ENVIRONMENT VARIABLES & PATH
 export EDITOR=nvim
-export LESS=' -R '
-export VAULT_SKIP_VERIFY=1
 export DOCKER_HOST=unix:///var/run/docker.sock
 
 # Use Zsh array for PATH (easier to read/modify)
 typeset -U path
 path=(
   $HOME/bin
+  $HOME/.local/bin
   /opt/homebrew/bin
   /opt/homebrew/sbin
   /opt/homebrew/opt/coreutils/libexec/gnubin
+  ~/.docker/cli-plugins
   /usr/local/bin
   /usr/local/sbin
-  /opt/homebrew/opt/libpq/bin
-  $HOME/.local/bin
-  ~/.docker/cli-plugins
   $path
 )
 
