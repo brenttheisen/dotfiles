@@ -21,7 +21,7 @@ plugins=(git gitfast vi-mode per-directory-history brew mvn ssh-agent docker aws
 DISABLE_AUTO_TITLE="true"
 
 # Environment variables
-export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:~/.docker/cli-plugins
+export PATH=$HOME/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$(/opt/homebrew/bin/brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:~/.docker/cli-plugins:/opt/homebrew/opt/libpq/bin:$HOME/.local/bin
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman"
 # export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
