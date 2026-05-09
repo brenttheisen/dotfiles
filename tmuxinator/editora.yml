@@ -1,20 +1,19 @@
-project_name: couplr
-project_root: ~/couplr
+project_name: editora
+project_root: ~/editora-video
 windows:
   - nextjs:
-      root: ~/couplr/nextjs
+      root: ~/editora-video/nextjs
       layout: even-horizontal
       panes:
         - $EDITOR
         - 
   - local:
-      root: ~/couplr/nextjs
-      layout: main-vertical
+      root: ~/editora-video/nextjs
+      layout: even-horizontal
       panes:
         - npm run dev
-        - npx mailing --quiet
         - dc up
-  - aws:
+  - terraform:
       layout: even-horizontal
       panes:
         - 
