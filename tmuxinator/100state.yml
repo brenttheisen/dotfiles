@@ -1,9 +1,0 @@
-project_name: 100state
-project_root: ~/
-windows:
-  - coworkone:
-      layout: bf53,238x67,0,0{119x67,0,0,7,118x67,120,0[118x33,120,0,12,118x33,120,34,13]}
-      panes:
-        - cd ~/coworkone && vim
-        - cd ~/coworkone
-        - cd ~/coworkone
