@@ -16,6 +16,7 @@ keymap("n", "<leader>d", ":bdelete<CR>")
 -- Telescope (Mapped to the functions we will install)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files" })
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+keymap("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find word under cursor" })
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "List open buffers" })
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "List help tags" })
 
