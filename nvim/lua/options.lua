@@ -26,6 +26,7 @@ opt.showmatch = true
 opt.list = true
 opt.listchars = { tab = "  ", eol = "$", trail = "~", extends = ">", precedes = "<" }
 opt.laststatus = 3 -- Global statusline
+opt.showtabline = 2 -- Always show tabline
 opt.cursorline = true
 -- System
 opt.clipboard = "unnamedplus"
