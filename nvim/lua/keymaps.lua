@@ -4,6 +4,7 @@ local keymap = vim.keymap.set
 keymap("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- Buffers
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle File Explorer" })
 keymap("n", "gn", ":bnext<CR>", { desc = "Next buffer" })
 keymap("n", "gp", ":bprevious<CR>", { desc = "Previous buffer" })
 keymap("n", "gd", ":bdelete<CR>", { desc = "Delete buffer" })

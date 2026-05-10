@@ -51,9 +51,107 @@ require("lazy").setup({
   { "lewis6991/gitsigns.nvim", config = true },
 
   -- LSP
-  { "neovim/nvim-lspconfig" },
+  {
+    "williamboman/mason.nvim",
+    config = true
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "bashls", "lua_ls", "vtsls" },
+    },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      ensure_installed = {
+        "stylua",
+        "shfmt",
+        "prettier",
+        "shellcheck",
+      },
+    },
+  },
+  { 
+    "neovim/nvim-lspconfig",
+    config = function()
+      -- Use the new Neovim 0.11+ API if available
+      if vim.lsp.config then
+        -- Set global capabilities for nvim-cmp
+        local capabilities = {}
+        if pcall(require, "cmp_nvim_lsp") then
+          capabilities = require("cmp_nvim_lsp").default_capabilities()
+        end
+        vim.lsp.config('*', { capabilities = capabilities })
+
+        -- Configure specific servers
+        vim.lsp.config('lua_ls', {
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } }
+            }
+          }
+        })
+
+        vim.lsp.config('vtsls', {
+          settings = {
+            typescript = {
+              updateImportsOnFileMove = { enabled = "always" },
+              suggest = { completeFunctionCalls = true },
+            },
+          },
+        })
+
+        -- Enable servers
+        vim.lsp.enable('bashls')
+        vim.lsp.enable('lua_ls')
+        vim.lsp.enable('vtsls')
+      else
+        -- Fallback for Neovim < 0.11
+        local lspconfig = require("lspconfig")
+        lspconfig.bashls.setup({})
+        lspconfig.lua_ls.setup({
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } }
+            }
+          }
+        })
+        lspconfig.vtsls.setup({})
+      end
+    end
+  },
   { "hrsh7th/nvim-cmp", dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" } },
 
   -- Utilities
   "vimpostor/vim-lumen",
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
+    opts = {
+      formatters_by_ft = {
+        lua = { "stylua" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" },
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        sh = { "shfmt" },
+      },
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
+    },
+  },
 })
