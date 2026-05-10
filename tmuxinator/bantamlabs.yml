@@ -1,15 +1,15 @@
 project_name: bantamlabs
-project_root: ~/bantamlabs
+root: ~/bantamlabs
+startup_window: obsidian-vault
 windows:
   - scratch:
-      layout: main-vertical
+      layout: even-horizontal
       panes:
         - nvim
         - 
-        - 
   - obsidian-vault:
-      root: ~/bantamlabs/obsidian-vault
       layout: even-horizontal
+      root: ~/obsidian-vault
       panes:
         - $EDITOR
         - claude
