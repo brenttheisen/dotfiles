@@ -71,5 +71,6 @@ jb() {
 
 # 7. FINAL SOURCES
 [[ -a ~/.zshrc.secure ]] && source ~/.zshrc.secure
+eval "$(rbenv init - zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
