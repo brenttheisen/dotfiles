@@ -1,0 +1,20 @@
+project_name: EditoraApp
+project_root: ~/EditoraApp
+windows:
+  - scratch:
+      layout: even-horizontal
+      panes:
+        - $EDITOR
+        - 
+  - editora-v2-frontend:
+      root: ~/EditoraApp/editora-v2-frontend
+      layout: even-horizontal
+      panes:
+        - $EDITOR
+        - 
+  - editora-v2-movie-maker:
+      root: ~/EditoraApp/editora-v2-movie-maker
+      layout: even-horizontal
+      panes:
+        - $EDITOR
+        - 
