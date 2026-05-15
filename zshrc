@@ -35,7 +35,6 @@ source $ZSH/oh-my-zsh.sh
 
 # 4. CORE TOOL CONFIG
 bindkey -v # Vi Mode
-eval "$(hub alias -s)"
 if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
@@ -52,13 +51,7 @@ alias ctags="$(brew --prefix)/bin/ctags"
 
 # Git
 alias gpr='git pull-request'
-alias gcmp='git compare'
 alias gbpush='git push -u brenttheisen $(current_branch)'
-alias gwddep='git diff $(last_deploy_production_tag)..master'
-alias gwcmpdep='git compare $(last_deploy_production_tag)..master'
-alias gbc='git rev-parse --abbrev-ref HEAD'
-compdef _git gpr='git pull-request'
-compdef _git gcmp='git compare'
 compdef gbpush=git
 
 # Jira
