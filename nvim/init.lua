@@ -59,7 +59,11 @@ require("lazy").setup({
   },
 
   -- UI
-  { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, config = true },
+  { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, opts = {
+    sections = {
+      lualine_c = { { "filename", path = 1 } },
+    },
+  }},
   { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons", config = true },
   { "nvim-tree/nvim-tree.lua", config = true },
   { "folke/trouble.nvim", opts = {} },
@@ -70,7 +74,14 @@ require("lazy").setup({
     lazy = false, -- Load immediately
     dependencies = { "nvim-lua/plenary.nvim" }, 
     config = function()
-      require("telescope").setup({})
+      require("telescope").setup({
+        pickers = {
+          find_files = {
+            hidden = true,
+            file_ignore_patterns = { ".git/" },
+          },
+        },
+      })
     end
   },
 
@@ -79,6 +90,7 @@ require("lazy").setup({
 
   -- Git
   "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
   { "lewis6991/gitsigns.nvim", config = true },
 
   -- LSP
