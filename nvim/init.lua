@@ -86,7 +86,7 @@ require("lazy").setup({
           find_files = {
             hidden = true,
             no_ignore = true,
-            file_ignore_patterns = { ".git/" },
+            file_ignore_patterns = { ".git/", "node_modules/", "%.next/" },
           },
         },
       })
