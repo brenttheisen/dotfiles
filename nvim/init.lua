@@ -65,7 +65,14 @@ require("lazy").setup({
     },
   }},
   { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons", config = true },
-  { "nvim-tree/nvim-tree.lua", config = true },
+  { "nvim-tree/nvim-tree.lua", config = function()
+    require("nvim-tree").setup({
+      filters = {
+        dotfiles = false,
+        git_ignored = false,
+      },
+    })
+  end },
   { "folke/trouble.nvim", opts = {} },
 
   -- Fuzzy Finding
@@ -78,6 +85,7 @@ require("lazy").setup({
         pickers = {
           find_files = {
             hidden = true,
+            no_ignore = true,
             file_ignore_patterns = { ".git/" },
           },
         },
