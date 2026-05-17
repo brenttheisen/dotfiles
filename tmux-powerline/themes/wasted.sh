@@ -103,7 +103,7 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
     "ifstat 30 255"
     "wan_ip 24 255"
     "ifstat_sys 30 255"
-    "load 237 167"
+    #"cpu 237 167"
     "now_playing 234 37"
     #"air ${TMUX_POWERLINE_SEG_AIR_COLOR} 255" \
     #"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \
