@@ -2,8 +2,7 @@ project_name: dotfiles
 project_root: ~/dotfiles
 windows:
   - code:
-      layout: main-vertical
+      layout: even-horizontal
       panes:
         - $EDITOR
-        - 
         - 
