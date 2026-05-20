@@ -79,18 +79,38 @@ require("lazy").setup({
   { 
     "nvim-telescope/telescope.nvim", 
     lazy = false, -- Load immediately
-    dependencies = { "nvim-lua/plenary.nvim" }, 
+    dependencies = { 
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
+    }, 
     config = function()
-      require("telescope").setup({
+      local telescope = require("telescope")
+      telescope.setup({
+        defaults = {
+          -- Optimize vimgrep (live_grep, etc.)
+          vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+            "--glob",
+            "!**/.git/*",
+          },
+        },
         pickers = {
           find_files = {
-            hidden = true,
-            no_ignore = true,
-            file_ignore_patterns = { ".git/", "node_modules/", "%.next/" },
+            -- Use fd for much faster file discovery
+            find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "--hidden", "--exclude", ".git" },
           },
         },
       })
-    end
+      -- Load fzf-native for high-performance fuzzy finding
+      telescope.load_extension("fzf")
+    end,
   },
 
   -- Treesitter
