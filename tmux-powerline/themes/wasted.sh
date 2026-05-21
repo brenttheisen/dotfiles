@@ -92,24 +92,10 @@ fi
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
   TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
     "time 4"
-    #"weather 37 255"
     "battery 0"
-    #"earthquake 3 0" \
-    # "pwd 89 211" \
-    #"macos_notification_count 29 255" \
-    #"mailcount 9 255" \
-    #"cpu 240 136"
-    "tmux_mem_cpu_load 234 136"
+    "tmux_mem_cpu_load 10"
     "ifstat 30 255"
     "wan_ip 24 255"
     "ifstat_sys 30 255"
-    #"cpu 237 167"
-    "now_playing 234 37"
-    #"air ${TMUX_POWERLINE_SEG_AIR_COLOR} 255" \
-    #"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}" \
-    #"xkb_layout 125 117" \
-    #"date_day 235 136" \
-    #"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-    #"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
   )
 fi
