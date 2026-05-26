@@ -12,6 +12,8 @@ keymap("n", "gd", ":bdelete<CR>", { desc = "Delete buffer" })
 keymap("n", "<leader>n", ":bnext<CR>")
 keymap("n", "<leader>p", ":bprevious<CR>")
 keymap("n", "<leader>d", ":bdelete<CR>")
+keymap("n", "<leader>ba", "<cmd>%bd<CR>", { desc = "Close all buffers" })
+keymap("n", "<leader>bo", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all other buffers" })
 
 -- Telescope (Mapped to the functions we will install)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files" })
