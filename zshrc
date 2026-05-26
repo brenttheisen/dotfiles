@@ -43,7 +43,6 @@ fi
 # General
 alias vi=nvim
 alias vim='stty start undef stop undef; nvim'
-alias tc='tmux_copy'
 alias ts='date +"%Y%m%d%H%M%S"'
 alias p='ping 8.8.8.8'
 alias grr='grep -Rn'
