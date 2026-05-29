@@ -235,9 +235,33 @@ require("lazy").setup({
           { name = "nvim_lsp" },
           { name = "codeium" },
           { name = "luasnip" },
+          { name = "obsidian" },
         }),
       })
     end,
+  },
+
+  -- Markdown & Note Taking
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*", -- recommended, use latest release instead of latest head
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      workspaces = {
+        {
+          name = "personal",
+          path = "~/obsidian-vault",
+        },
+      },
+      completion = {
+        nvim_cmp = true,
+        min_chars = 2,
+      },
+    },
   },
 
   -- Utilities

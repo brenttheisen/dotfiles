@@ -51,5 +51,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     opt.wrap = true
     opt.linebreak = true
     opt.list = false
+    opt.conceallevel = 2
   end,
 })
