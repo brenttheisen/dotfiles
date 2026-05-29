@@ -19,3 +19,16 @@ windows:
       panes:
         - 
         - 
+  - scraper:
+      root: ~/editora-video/scraper
+      layout: even-horizontal
+      panes:
+        - 
+        - 
+  - renderer:
+      root: ~/editora-video/renderer
+      layout: even-horizontal
+      panes:
+        - 
+        - 
+
