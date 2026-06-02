@@ -31,6 +31,8 @@ plugins=(
   git gitfast vi-mode per-directory-history brew
   ssh-agent docker aws history-substring-search jsontools pass nvm
 )
+# Suppress ssh-agent plugin console output to prevent Powerlevel10k instant prompt warnings
+zstyle :omz:plugins:ssh-agent quiet yes
 source $ZSH/oh-my-zsh.sh
 
 # 4. CORE TOOL CONFIG
