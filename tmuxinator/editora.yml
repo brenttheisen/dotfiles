@@ -11,7 +11,7 @@ windows:
       root: ~/editora-video/nextjs
       layout: even-horizontal
       panes:
-        - npm run dev
+        - pnpm run dev
         - docker compose up postgres -d
   - terraform:
       root: ~/editora-video/terraform
@@ -31,4 +31,3 @@ windows:
       panes:
         - 
         - 
-
