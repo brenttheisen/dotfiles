@@ -288,6 +288,7 @@ require("lazy").setup({
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         sh = { "shfmt" },
+        markdown = { "prettier" },
       },
       format_on_save = {
         timeout_ms = 500,
