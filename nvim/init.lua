@@ -129,7 +129,7 @@ require("lazy").setup({
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "bashls", "lua_ls", "vtsls" },
+      ensure_installed = { "bashls", "lua_ls", "vtsls", "jsonls" },
     },
   },
   {
@@ -177,6 +177,7 @@ require("lazy").setup({
         vim.lsp.enable('bashls')
         vim.lsp.enable('lua_ls')
         vim.lsp.enable('vtsls')
+        vim.lsp.enable('jsonls')
       else
         -- Fallback for Neovim < 0.11
         local lspconfig = require("lspconfig")
@@ -189,6 +190,7 @@ require("lazy").setup({
           }
         })
         lspconfig.vtsls.setup({})
+        lspconfig.jsonls.setup({})
       end
     end
   },
@@ -287,6 +289,7 @@ require("lazy").setup({
         typescriptreact = { "prettier" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
+        json = { "prettier" },
         sh = { "shfmt" },
         markdown = { "prettier" },
       },
