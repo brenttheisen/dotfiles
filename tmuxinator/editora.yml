@@ -12,7 +12,7 @@ windows:
       layout: even-horizontal
       panes:
         - pnpm run dev
-        - docker compose up postgres -d
+        - pnpm dev:up
   - terraform:
       root: ~/editora-video/terraform
       layout: even-horizontal
