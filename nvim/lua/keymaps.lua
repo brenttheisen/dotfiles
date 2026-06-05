@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
 
 -- General
+keymap("n", "<leader>h", ":noh<CR>", { desc = "Clear search highlights" })
 keymap("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- Buffers
