@@ -42,7 +42,6 @@ if [ -x /usr/libexec/path_helper ]; then
 fi
 
 # 5. ALIASES
-# General
 alias vi=nvim
 alias vim='stty start undef stop undef; nvim'
 alias ts='date +"%Y%m%d%H%M%S"'
@@ -50,20 +49,7 @@ alias p='ping 8.8.8.8'
 alias grr='grep -Rn'
 alias ctags="$(brew --prefix)/bin/ctags"
 
-# Git
-alias gpr='git pull-request'
-alias gbpush='git push -u brenttheisen $(current_branch)'
-compdef gbpush=git
-
-# Jira
-j() {
-  open "https://${JIRA_ORG_HOSTNAME}.atlassian.net/browse/$1"
-}
-jb() {
-  j $(current_branch)
-}
-
-# 7. FINAL SOURCES
+# 6. FINAL SOURCES
 [[ -a ~/.zshrc.secure ]] && source ~/.zshrc.secure
 eval "$(rbenv init - zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
