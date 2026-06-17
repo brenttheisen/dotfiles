@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # 4. CORE TOOL CONFIG
 bindkey -v # Vi Mode
 if [ -x /usr/libexec/path_helper ]; then
-  eval `/usr/libexec/path_helper -s`
+  eval $(/usr/libexec/path_helper -s)
 fi
 
 # 5. ALIASES
@@ -50,7 +50,7 @@ alias grr='grep -Rn'
 alias ctags="$(brew --prefix)/bin/ctags"
 
 # 6. FINAL SOURCES
-[[ -a ~/.zshrc.secure ]] && source ~/.zshrc.secure
+[[ -e ~/.zshrc.secure ]] && source ~/.zshrc.secure
 eval "$(rbenv init - zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

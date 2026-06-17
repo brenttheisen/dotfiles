@@ -1,0 +1,11 @@
+{
+  "plugins": ["prettier-plugin-sh"],
+  "overrides": [
+    {
+      "files": [".zshrc", "*.zsh", "p10k.zsh", ".bashrc", ".sh"],
+      "options": {
+        "parser": "sh"
+      }
+    }
+  ]
+}
