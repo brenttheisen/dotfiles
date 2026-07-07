@@ -1,0 +1,21 @@
+project_name: kinvault
+project_root: ~/kinvault.app
+windows:
+  - next.js:
+      root: ~/kinvault.app/next.js
+      layout: even-horizontal
+      panes:
+        - $EDITOR
+        - 
+  - local:
+      root: ~/kinvault.app/next.js
+      layout: even-horizontal
+      panes:
+        - pnpm run dev
+        - pnpm dev:up
+  - terraform:
+      root: ~/kinvault.app/terraform
+      layout: even-horizontal
+      panes:
+        - 
+        - 
