@@ -1,0 +1,32 @@
+# Ghostty Configuration File
+# Read documentation: ghostty +show-config --default --docs
+
+# Theme Settings
+# Matches macOS system appearance and aligns with your Neovim auto-colorscheme setup (vim-lumen)
+theme = dark:iTerm2 Solarized Dark,light:iTerm2 Solarized Light
+
+# Font Settings
+# (If using a Nerd Font for Powerlevel10k/nvim-web-devicons, e.g. "MesloLGS NF" or "JetBrainsMono Nerd Font")
+font-family = "MesloLGS NF"
+font-size = 14
+# font-synthetic-style = false
+
+# Window Layout & Appearance
+# Open new windows maximized (not fullscreen)
+maximize = true
+macos-titlebar-style = tabs
+window-padding-x = 0
+window-padding-y = 0
+window-decoration = true
+# window-title-font-family = "SF Pro"
+
+# Cursor Settings
+cursor-style = block
+cursor-style-blink = true
+
+# Interaction
+copy-on-select = true
+confirm-close-surface = false
+
+# Mouse & Clipboard Integration
+mouse-scroll-multiplier = 1.0
