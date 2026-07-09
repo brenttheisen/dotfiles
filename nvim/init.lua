@@ -24,6 +24,9 @@ require("keymaps")
 require("lazy").setup({
   -- Colorscheme
   { "maxmx03/solarized.nvim", priority = 1000, config = function()
+    require("solarized").setup({
+      transparent = { enabled = true },
+    })
     vim.cmd.colorscheme("solarized")
   end },
 
