@@ -41,6 +41,13 @@ if [ -x /usr/libexec/path_helper ]; then
   eval $(/usr/libexec/path_helper -s)
 fi
 
+# Ghostty only auto-injects shell integration (prompt cursor, OSC 133 marks,
+# title updates) into shells it spawns directly — not into nested shells like
+# tmux panes. Source it manually so those features work inside tmux too.
+if [[ -n "$GHOSTTY_RESOURCES_DIR" ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
+
 # 5. ALIASES
 alias vi=nvim
 alias vim='stty start undef stop undef; nvim'
