@@ -19,6 +19,10 @@ path=(
   /usr/local/bin
   /usr/local/sbin
   $path
+  /usr/bin
+  /bin
+  /usr/sbin
+  /sbin
 )
 
 export MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
@@ -36,10 +40,9 @@ zstyle :omz:plugins:ssh-agent quiet yes
 source $ZSH/oh-my-zsh.sh
 
 # 4. CORE TOOL CONFIG
-bindkey -v # Vi Mode
-if [ -x /usr/libexec/path_helper ]; then
-  eval $(/usr/libexec/path_helper -s)
-fi
+
+# Vi Mode
+bindkey -v
 
 # Ghostty only auto-injects shell integration (prompt cursor, OSC 133 marks,
 # title updates) into shells it spawns directly — not into nested shells like
