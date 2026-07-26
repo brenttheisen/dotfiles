@@ -59,6 +59,7 @@ alias p='ping 8.8.8.8'
 alias grr='grep -Rn'
 alias ctags="$(brew --prefix)/bin/ctags"
 alias timg='timg -pk'
+alias y='yazi'
 
 # 6. FINAL SOURCES
 [[ -e ~/.zshrc.secure ]] && source ~/.zshrc.secure
