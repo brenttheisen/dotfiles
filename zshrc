@@ -34,6 +34,8 @@ DISABLE_AUTO_TITLE="true"
 plugins=(
   git gitfast vi-mode per-directory-history brew
   ssh-agent docker aws history-substring-search jsontools pass nvm
+  z terraform gh macos sudo extract colored-man-pages
+  fzf-tab zsh-autosuggestions
 )
 # Suppress ssh-agent plugin console output to prevent Powerlevel10k instant prompt warnings
 zstyle :omz:plugins:ssh-agent quiet yes
