@@ -91,8 +91,6 @@ fi
 
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
   TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-    "time 4"
-    "battery 0"
     "tmux_mem_cpu_load 10"
     "ifstat 30 255"
     "wan_ip 24 255"
