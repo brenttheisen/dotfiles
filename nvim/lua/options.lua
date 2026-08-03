@@ -44,13 +44,16 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.md", "*.markdown" },
+-- spell/wrap/etc. are window-local, so they must be explicitly toggled off
+-- on every buffer switch or they'd leak into non-markdown buffers sharing the window
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = "*",
   callback = function()
-    opt.spell = true
-    opt.wrap = true
-    opt.linebreak = true
-    opt.list = false
-    opt.conceallevel = 2
+    local is_markdown = vim.bo.filetype == "markdown"
+    opt.spell = is_markdown
+    opt.wrap = is_markdown
+    opt.linebreak = is_markdown
+    opt.list = not is_markdown
+    opt.conceallevel = is_markdown and 2 or 0
   end,
 })
